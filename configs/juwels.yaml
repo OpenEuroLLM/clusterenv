@@ -1,0 +1,13 @@
+hostname: "*jrlogin*"
+module_init: "ml CUDA; ml Python;"
+
+slurm:  
+  default_partition: "dc-gpu-devel"
+  default_account: "synthlaion"
+  max_hour: 4
+  n_gpu_per_node: 4
+  exclude_node_list:
+
+HF_HOME: TODO
+eval_venv: 
+eval_output:     
