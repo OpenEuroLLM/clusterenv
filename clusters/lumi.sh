@@ -3,7 +3,7 @@ CLUSTER_HOSTNAME_PATTERN="^(lumi|nid[0-9]+|uan)"
 CLUSTER_NAME="lumi"
 
 export OELLM_PROJECT_ROOT="/scratch/project_465000xxx"
-export OELLM_WANDB_ENTITY="openeurollm"
+export WANDB_PROJECT="openeurollm"
 
 # Slurm configuration
 export OELLM_SLURM_DEFAULT_PARTITION="standard-g"

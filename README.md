@@ -5,7 +5,7 @@ Standardized environment configuration for LLM training across multiple HPC clus
 ## Installation
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/ORG/REPO/main/cluster-config/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/OpenEuroLLM/clusterenv/main/install.sh | bash
 ```
 
 The installer will:
@@ -52,7 +52,7 @@ After installation, the following variables are available:
 | `OELLM_DATASETS_TOKENIZED_DIR` | Tokenized datasets | No |
 | `HF_HOME` | HuggingFace cache | Yes |
 | `OELLM_WANDB_DIR` | Weights & Biases local directory | Yes |
-| `OELLM_WANDB_ENTITY` | Default W&B entity | - |
+| `WANDB_PROJECT` | Default W&B project name | - |
 | `OELLM_SLURM_JOBS_DIR` | Slurm job scripts and logs | Yes |
 | `OELLM_SLURM_DEFAULT_PARTITION` | Default Slurm partition for job submission | - |
 | `OELLM_SLURM_DEFAULT_ACCOUNT` | Default Slurm account/project for billing | - |
@@ -83,7 +83,7 @@ CLUSTER_HOSTNAME_PATTERN="^(hostname|node[0-9]+)"
 CLUSTER_NAME="cluster_name"
 
 export OELLM_PROJECT_ROOT="/path/to/project"
-export OELLM_WANDB_ENTITY="openeurollm"
+export WANDB_PROJECT="openeurollm"
 ```
 
 2. Add the cluster name to the `CLUSTERS` array in `install.sh` and `update.sh`
@@ -93,5 +93,5 @@ export OELLM_WANDB_ENTITY="openeurollm"
 To override any variable, add exports to your `.bashrc` after the source line:
 ```bash
 source "$HOME/.openeurollm-env/config.sh"
-export OELLM_WANDB_ENTITY="my-entity"  # Override default
+export WANDB_PROJECT="my-entity"  # Override default
 ```

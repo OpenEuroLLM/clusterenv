@@ -4,7 +4,7 @@
 
 set -e
 
-GITHUB_BASE_URL="https://raw.githubusercontent.com/ORG/REPO/main/cluster-config"
+GITHUB_BASE_URL="https://raw.githubusercontent.com/OpenEuroLLM/clusterenv/main"
 INSTALL_DIR="$HOME/.openeurollm-env"
 CLUSTERS=(lumi leonardo jupiter juwels local)
 
