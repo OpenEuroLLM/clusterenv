@@ -33,16 +33,12 @@ mkdir -p "$INSTALL_DIR/clusters"
 if [ "$LOCAL_MODE" = true ]; then
     echo "Installing from local files..."
     cp "$SCRIPT_DIR/common.sh" "$INSTALL_DIR/common.sh"
-    cp "$SCRIPT_DIR/update.sh" "$INSTALL_DIR/update.sh"
-    chmod +x "$INSTALL_DIR/update.sh"
     for cluster in "${CLUSTERS[@]}"; do
         cp "$SCRIPT_DIR/clusters/${cluster}.sh" "$INSTALL_DIR/clusters/${cluster}.sh"
     done
 else
     echo "Downloading configuration files..."
     curl -sSL "$GITHUB_BASE_URL/common.sh" -o "$INSTALL_DIR/common.sh"
-    curl -sSL "$GITHUB_BASE_URL/update.sh" -o "$INSTALL_DIR/update.sh"
-    chmod +x "$INSTALL_DIR/update.sh"
     for cluster in "${CLUSTERS[@]}"; do
         curl -sSL "$GITHUB_BASE_URL/clusters/${cluster}.sh" -o "$INSTALL_DIR/clusters/${cluster}.sh"
     done
@@ -138,5 +134,4 @@ echo -e "  ${CYAN}OELLM_SLURM_JOBS_DIR${NC}=${GREEN}$OELLM_SLURM_JOBS_DIR${NC}"
 echo -e "  ${CYAN}OELLM_SLURM_DEFAULT_PARTITION${NC}=${GREEN}$OELLM_SLURM_DEFAULT_PARTITION${NC}"
 echo -e "  ${CYAN}OELLM_SLURM_DEFAULT_ACCOUNT${NC}=${GREEN}$OELLM_SLURM_DEFAULT_ACCOUNT${NC}"
 echo ""
-echo "To update later, run:"
-echo "  $INSTALL_DIR/update.sh"
+echo "To update, re-run the installation command."
