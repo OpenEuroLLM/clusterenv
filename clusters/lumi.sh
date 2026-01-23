@@ -1,0 +1,10 @@
+# LUMI cluster configuration
+CLUSTER_HOSTNAME_PATTERN="^(lumi|nid[0-9]+|uan)"
+CLUSTER_NAME="lumi"
+
+export OELLM_PROJECT_ROOT="/scratch/project_465000xxx"
+export OELLM_WANDB_ENTITY="openeurollm"
+
+# Slurm configuration
+export OELLM_SLURM_DEFAULT_PARTITION="standard-g"
+export OELLM_SLURM_DEFAULT_ACCOUNT="project_465000xxx"
