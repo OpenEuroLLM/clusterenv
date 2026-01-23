@@ -55,8 +55,14 @@ CURRENT_HOSTNAME=$(hostname)
 echo "Detecting cluster from hostname: $CURRENT_HOSTNAME"
 
 for cluster in "${CLUSTERS[@]}"; do
+    # Skip local - it's only used as fallback
+    [ "$cluster" = "local" ] && continue
+
     # Extract the pattern from cluster config (read only the pattern line)
     PATTERN=$(grep "^CLUSTER_HOSTNAME_PATTERN=" "$INSTALL_DIR/clusters/${cluster}.sh" | cut -d'"' -f2)
+
+    # Skip if pattern is empty or file was not downloaded correctly
+    [ -z "$PATTERN" ] && continue
 
     if echo "$CURRENT_HOSTNAME" | grep -qE "$PATTERN"; then
         DETECTED_CLUSTER="$cluster"
