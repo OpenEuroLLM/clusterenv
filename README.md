@@ -18,12 +18,7 @@ After installation, restart your shell or run:
 source ~/.openeurollm-env/config.sh
 ```
 
-## Updating
-
-To update to the latest configuration, re-run the installation command:
-```bash
-curl -sSL https://raw.githubusercontent.com/OpenEuroLLM/clusterenv/main/install.sh | bash
-```
+To update to the latest configuration, re-run the installation command.
 
 ## Supported Clusters
 
