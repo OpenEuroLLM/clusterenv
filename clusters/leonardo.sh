@@ -1,5 +1,5 @@
 # Leonardo cluster configuration
-CLUSTER_HOSTNAME_PATTERN="^(leonardo|lrdn[0-9]+)"
+CLUSTER_HOSTNAME_PATTERN="^(login[0-9]{2}.leonardo|leonardo|lrdn[0-9]+)"
 CLUSTER_NAME="leonardo"
 
 export OELLM_PROJECT_ROOT="/leonardo_scratch/large/project_xxx"
