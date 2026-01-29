@@ -1,5 +1,5 @@
 # Jupiter cluster configuration
-CLUSTER_HOSTNAME_PATTERN="^(jupiter|jpbl|jpt[0-9]+)"
+CLUSTER_HOSTNAME_PATTERN="^(alogin[0-9]+)"
 CLUSTER_NAME="marenostrum"
 
 export OELLM_PROJECT_ROOT="/gpfs/projects/xxx"

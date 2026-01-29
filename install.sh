@@ -7,7 +7,7 @@ set -e
 
 GITHUB_BASE_URL="https://raw.githubusercontent.com/OpenEuroLLM/clusterenv/main"
 INSTALL_DIR="$HOME/.openeurollm-env"
-CLUSTERS=(lumi leonardo jupiter juwels local)
+CLUSTERS=(lumi leonardo jupiter juwels marenostrum local)
 
 # Detect if running locally (script directory contains the config files)
 # Handle both bash and zsh, and both sourcing and direct execution
