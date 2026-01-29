@@ -1,5 +1,5 @@
 # Juwels cluster configuration
-CLUSTER_HOSTNAME_PATTERN="^(juwels|jwl[0-9]+|jwc[0-9]+)"
+CLUSTER_HOSTNAME_PATTERN="^(juwels|jwl[0-9]+|jwc[0-9]+|jwlogin)"
 CLUSTER_NAME="juwels"
 
 export OELLM_PROJECT_ROOT="/p/project/xxx"
